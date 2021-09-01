@@ -1,0 +1,37 @@
+//big-desktop (min-width: 1800)
+//tab-land-big (max-width: 1200)
+//tab-land-small(max-width: 1000)
+//tab-pot       (max-width: 800)
+//mobile        (max-width: 600)
+
+@mixin respond($device) {
+  @if $device == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+
+  @if $device == tab-land-big {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $device == tab-land-small {
+    @media only screen and (max-width: 62.5em) {
+      @content;
+    }
+  }
+
+  @if $device == tab-pot {
+    @media only screen and (max-width: 50em) {
+      @content;
+    }
+  }
+
+  @if $device == mobile {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+}

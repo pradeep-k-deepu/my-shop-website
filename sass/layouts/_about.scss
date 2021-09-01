@@ -1,0 +1,133 @@
+.section__about {
+  padding: 7rem 0 10rem 0;
+
+  @include respond(tab-land-small) {
+    padding: 6rem 0 9rem 0;
+  }
+
+  @include respond(tab-pot) {
+    padding: 5rem 0 8rem 0;
+  }
+
+  @include respond(mobile) {
+    padding: 3.5rem 0 6.5rem 0;
+  }
+
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(253, 150, 68, 0.6)),
+      to(rgba(250, 130, 49, 0.6))
+    ),
+    url("../../images/about.jpg");
+  background-image: linear-gradient(
+      rgba(253, 150, 68, 0.6),
+      rgba(250, 130, 49, 0.6)
+    ),
+    url("../../images/about.jpg");
+  .about {
+    color: #fff;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 32rem 1fr;
+    grid-template-columns: 32rem 1fr;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    grid-gap: 5rem;
+    .about__photo {
+      -o-object-fit: fill;
+      object-fit: fill;
+      border-radius: 50%;
+      width: 100%;
+      height: 70%;
+
+      @include respond(mobile) {
+        width: 70%;
+        height: 100%;
+      }
+    }
+
+    @include respond(tab-pot) {
+      -ms-grid-columns: 28rem 1fr;
+      grid-template-columns: 28rem 1fr;
+      grid-gap: 4rem;
+    }
+
+    @include respond(mobile) {
+      -ms-grid-rows: 30rem 1fr;
+      grid-template-rows: 30rem 1fr;
+      -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+      justify-items: center;
+    }
+  }
+  .about__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .about__info-name {
+    font-size: 4rem;
+    text-align: center;
+
+    @include respond(tab-pot) {
+      font-size: 3.5rem;
+    }
+  }
+  .about__info-intro {
+    font-size: 2.1rem;
+    word-spacing: 0.5rem;
+
+    @include respond(tab-pot) {
+      font-size: 1.9rem;
+    }
+  }
+  .about__info-social-icons {
+    margin: 0 auto;
+
+    @include respond(tab-pot) {
+      margin-top: 1rem;
+    }
+    a {
+      text-decoration: none;
+      &:not(:last-child) {
+        margin-right: 4rem;
+      }
+      .facebook {
+        &:hover {
+          fill: #3b5998;
+          -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+        }
+      }
+      .instagram {
+        &:hover {
+          fill: #bc2a8d;
+          -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+        }
+      }
+      .twitter {
+        &:hover {
+          fill: #00acee;
+          -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+        }
+      }
+      svg {
+        height: 3rem;
+        width: 3rem;
+        fill: #fff;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+}

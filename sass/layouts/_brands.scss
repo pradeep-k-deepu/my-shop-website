@@ -1,0 +1,61 @@
+.section__brands {
+  padding: 7rem 0;
+  background-image: -webkit-gradient(
+    linear,
+    right bottom,
+    left top,
+    from(rgba(253, 150, 68, 0.13)),
+    to(rgba(250, 130, 49, 0.13))
+  );
+  background-image: linear-gradient(
+    to top left,
+    rgba(253, 150, 68, 0.13),
+    rgba(250, 130, 49, 0.13)
+  );
+  .brand__images {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(10rem, 1fr)) [auto-fit];
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+    justify-items: center;
+    grid-column-gap: 2rem;
+    .brand__img {
+      margin-top: 2rem;
+      height: 6rem;
+      width: 10rem;
+      -o-object-fit: contain;
+      object-fit: contain;
+
+      @include respond(tab-land-small) {
+        height: 5rem;
+        width: 8rem;
+      }
+    }
+
+    @include respond(tab-land-small) {
+      grid-template-rows: repeat(2, 6rem);
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include respond(mobile) {
+      grid-template-rows: repeat(4, 6rem);
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 0;
+    }
+  }
+
+  @include respond(tab-land-small) {
+    padding: 6rem 0;
+  }
+
+  @include respond(tab-pot) {
+    padding: 5rem 0;
+  }
+
+  @include respond(mobile) {
+    padding: 4rem 0;
+  }
+}

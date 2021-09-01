@@ -1,0 +1,48 @@
+.btn {
+  border-radius: 0.3rem;
+  text-transform: uppercase;
+  font-family: inherit;
+}
+
+.btn__main {
+  -webkit-animation: bounceInUp 3s 1s;
+  animation: bounceInUp 3s 1s;
+  -webkit-animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
+  width: 20rem;
+  font-size: 2rem;
+  padding: 1rem 2.2rem;
+  letter-spacing: 0.2rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-color: #fd9644;
+  border: 2px solid transparent;
+  color: #fff;
+  text-decoration: none;
+  &:hover {
+    background-color: #fa8231;
+    color: #fff;
+  }
+}
+.btn__sub {
+  -webkit-animation: bounceInUp 3s 1s;
+  animation: bounceInUp 3s 1s;
+  -webkit-animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
+  width: 20rem;
+  font-size: 2rem;
+  padding: 1rem 2.2rem;
+  letter-spacing: 0.2rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-color: #fd9644;
+  border: 2px solid transparent;
+  color: #fff;
+  text-decoration: none;
+  background: none;
+  border: 2px solid #fd9644;
+  &:hover {
+    border: 2px solid #fff;
+    color: #fa8231;
+  }
+}

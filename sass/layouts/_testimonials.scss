@@ -1,0 +1,112 @@
+.section__testimonials {
+  padding: 7rem 0 10rem 0;
+  background-image: -webkit-gradient(
+    linear,
+    right bottom,
+    left top,
+    from(rgba(253, 150, 68, 0.2)),
+    to(rgba(250, 130, 49, 0.2))
+  );
+  background-image: linear-gradient(
+    to top left,
+    rgba(253, 150, 68, 0.2),
+    rgba(250, 130, 49, 0.2)
+  );
+  .testimonials {
+    list-style: none;
+  }
+  .testimonials__card {
+    display: inline-block;
+    height: 28rem;
+    width: 28rem;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    background-image: -webkit-gradient(
+      linear,
+      right bottom,
+      left top,
+      from(rgba(253, 150, 68, 0.1)),
+      to(rgba(250, 130, 49, 0.1))
+    );
+    background-image: linear-gradient(
+      to top left,
+      rgba(253, 150, 68, 0.1),
+      rgba(250, 130, 49, 0.1)
+    );
+    -webkit-box-shadow: 0.05rem 0.1rem 0.3rem #fd9644;
+    box-shadow: 0.05rem 0.1rem 0.3rem #fd9644;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    .user__info {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      gap: 2rem;
+      figure {
+        height: 6rem;
+        width: 6rem;
+        .user__photo {
+          height: 100%;
+          width: 100%;
+          border-radius: 50%;
+          -o-object-fit: cover;
+          object-fit: cover;
+        }
+      }
+      .user__add-info {
+        .user__name {
+          font-size: 1.7rem;
+          line-height: 1.5;
+          text-transform: uppercase;
+          font-weight: 600;
+        }
+        .user__place {
+          font-size: 1.5rem;
+          line-height: 1.5;
+          text-transform: capitalize;
+        }
+      }
+    }
+    .user__ratings {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      gap: 0.3rem;
+      margin-top: 2rem;
+      svg {
+        height: 2rem;
+        width: 2rem;
+        fill: #fa8231;
+      }
+    }
+    .user__review {
+      font-size: 1.8rem;
+      text-align: center;
+      margin-top: 2rem;
+      position: relative;
+    }
+    &:hover {
+      -webkit-transform: translateY(-0.5rem);
+      transform: translateY(-0.5rem);
+      cursor: pointer;
+    }
+  }
+
+  @include respond(tab-land-small) {
+    padding: 6rem 0 9rem 0;
+  }
+
+  @include respond(tab-pot) {
+    padding: 5rem 0 8rem 0;
+  }
+
+  @include respond(mobile) {
+    padding: 3.5rem 0 6.5rem 0;
+  }
+}

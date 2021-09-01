@@ -1,0 +1,94 @@
+.section__services {
+  padding: 7rem 0 10rem 0;
+  background-image: -webkit-gradient(
+    linear,
+    right bottom,
+    left top,
+    from(rgba(253, 150, 68, 0.13)),
+    to(rgba(250, 130, 49, 0.13))
+  );
+  background-image: linear-gradient(
+    to top left,
+    rgba(253, 150, 68, 0.13),
+    rgba(250, 130, 49, 0.13)
+  );
+  .service__images {
+    display: -ms-grid;
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    figure {
+      position: relative;
+      overflow: hidden;
+      -webkit-transition: all 0.3s ease-in;
+      transition: all 0.3s ease-in;
+      border-radius: 0.5rem;
+      .service__img {
+        width: 100%;
+        height: 100%;
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+        -webkit-transition: all 0.3s ease-in;
+        transition: all 0.3s ease-in;
+      }
+      .service__name {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, 60%);
+        transform: translate(-50%, 60%);
+        font-size: 3rem;
+        font-family: inherit;
+        font-weight: 700;
+        text-transform: uppercase;
+        word-spacing: 0.2rem;
+        letter-spacing: 0.1rem;
+        color: #fa8231;
+        text-align: center;
+        opacity: 0;
+        -webkit-transition: all 0.3s ease-in;
+        transition: all 0.3s ease-in;
+      }
+      &:hover {
+        cursor: pointer;
+        -webkit-transform: translateY(-0.2rem);
+        transform: translateY(-0.2rem);
+        .service__img {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          -webkit-filter: blur(0.4rem) brightness(50%);
+          filter: blur(0.4rem) brightness(50%);
+        }
+        .service__name {
+          -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          opacity: 1;
+        }
+      }
+    }
+
+    @include respond(tab-pot) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond(mobile) {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 3rem;
+      -webkit-column-gap: 0;
+      column-gap: 0;
+    }
+  }
+
+  @include respond(tab-land-small) {
+    padding: 6rem 0 9rem 0;
+  }
+
+  @include respond(tab-pot) {
+    padding: 5rem 0 8rem 0;
+  }
+
+  @include respond(mobile) {
+    padding: 3.5rem 0 6.5rem 0;
+  }
+}

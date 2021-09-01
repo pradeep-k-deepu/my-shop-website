@@ -1,0 +1,98 @@
+.footer {
+  padding: 8rem 0;
+  background-image: -webkit-gradient(
+    linear,
+    right bottom,
+    left top,
+    from(rgba(253, 150, 68, 0.2)),
+    to(rgba(250, 130, 49, 0.2))
+  );
+  background-image: linear-gradient(
+    to top left,
+    rgba(253, 150, 68, 0.2),
+    rgba(250, 130, 49, 0.2)
+  );
+  position: relative;
+  .copyright {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 5rem;
+    word-spacing: 0.3rem;
+    span {
+      color: red;
+      font-size: 2.2rem;
+    }
+
+    @include respond(tab-pot) {
+      margin-top: 8rem;
+    }
+  }
+
+  @include respond(tab-land-small) {
+    padding: 7rem 0;
+  }
+
+  @include respond(tab-pot) {
+    padding: 6rem 0;
+  }
+
+  @include respond(mobile) {
+    padding: 5rem 0;
+  }
+}
+.footer__icon-top {
+  text-decoration: none;
+  position: absolute;
+  right: 5vh;
+  top: 5vh;
+  svg {
+    width: 2rem;
+    height: 2rem;
+    fill: #fd9644;
+  }
+}
+.footer__info {
+  display: -ms-grid;
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  > * {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.8rem;
+
+    @include respond(tab-pot) {
+      gap: 2rem;
+    }
+    svg {
+      height: 4rem;
+      width: 4rem;
+      fill: #fa8231;
+    }
+  }
+
+  @include respond(tab-pot) {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: start;
+    grid-gap: 6rem;
+    padding-left: 10rem;
+  }
+
+  @include respond(mobile) {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, -webkit-min-content);
+    grid-template-rows: repeat(4, min-content);
+    padding-left: 8rem;
+  }
+}

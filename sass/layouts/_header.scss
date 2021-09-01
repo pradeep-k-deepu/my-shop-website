@@ -1,0 +1,175 @@
+.header {
+  height: 100vh;
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+  .slider {
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    overflow: hidden;
+  }
+  .slider__img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.7)),
+      to(rgba(0, 0, 0, 0.7))
+    );
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    overflow: hidden;
+    .nav {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding: 1rem 5rem 0rem 5rem;
+
+      @include respond(tab-land-big) {
+        padding: 1rem 6rem 0rem 6rem;
+      }
+      .sticky {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 50;
+        background-image: -webkit-gradient(
+          linear,
+          left top,
+          left bottom,
+          from(rgba(0, 0, 0, 0.3)),
+          to(rgba(0, 0, 0, 0.3))
+        );
+        background-image: linear-gradient(
+          rgba(0, 0, 0, 0.3),
+          rgba(0, 0, 0, 0.3)
+        );
+        height: 5rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        gap: 6rem;
+        list-style: none;
+        font-size: 2rem;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 0 10rem;
+        @include respond(tab-pot) {
+          display: none;
+        }
+      }
+    }
+    .nav__logo {
+      height: 12vh;
+      width: 12vh;
+
+      @include respond(tab-pot) {
+        height: 8vh;
+        width: 8vh;
+      }
+
+      @include respond(mobile) {
+        height: 7vh;
+        width: 7vh;
+      }
+    }
+    .nav__links-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      gap: 10vh;
+      list-style: none;
+      font-size: 2rem;
+
+      @include respond(tab-land-small) {
+        gap: 5vh;
+      }
+
+      @include respond(tab-pot) {
+        display: none;
+      }
+    }
+    .nav__item {
+      padding-bottom: 0.2rem;
+      border-bottom: 0.2rem solid transparent;
+      -webkit-transition: 0.2s all ease-out;
+      transition: 0.2s all ease-out;
+      &:hover {
+        border-bottom: 0.2rem solid #fd9644;
+      }
+    }
+    .nav__link {
+      text-decoration: none;
+      color: #fff;
+      text-transform: uppercase;
+    }
+    .text__box {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      gap: 5rem;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 100%;
+      color: #fff;
+
+      @include respond(tab-pot) {
+        gap: 7rem;
+      }
+
+      @include respond(mobile) {
+        padding: 2rem;
+        gap: 9rem;
+      }
+    }
+    .buttons {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      gap: 5rem;
+
+      @include respond(mobile) {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+    }
+  }
+}

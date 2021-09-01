@@ -1,0 +1,65 @@
+.heading__main {
+  -webkit-animation: backInLeft 2s;
+  animation: backInLeft 2s;
+  display: block;
+  font-size: 5rem;
+  word-spacing: 2rem;
+  letter-spacing: 1rem;
+  text-decoration: none;
+
+  @include respond(tab-pot) {
+    font-size: 4rem;
+  }
+}
+.heading__sub {
+  -webkit-animation: backInRight 2s;
+  animation: backInRight 2s;
+  display: block;
+  font-size: 3rem;
+  word-spacing: 0.5rem;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+
+  @include respond(tab-pot) {
+    margin-top: 2rem;
+  }
+
+  @include respond(mobile) {
+    font-size: 2rem;
+  }
+}
+
+.heading__secondary {
+  font-size: 4rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  word-spacing: 0.5rem;
+  line-height: 1;
+  text-shadow: 2px 5px 3px rgba(250, 130, 49, 0.37);
+
+  @include respond(tab-pot) {
+    font-size: 3.5rem;
+  }
+
+  @include respond(mobile) {
+    font-size: 2.5rem;
+  }
+}
+.heading__tertiary {
+  font-size: 4rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  word-spacing: 0.5rem;
+  line-height: 1;
+  text-shadow: 2px 5px 3px rgba(250, 130, 49, 0.37);
+  font-size: 2rem;
+  text-shadow: none;
+
+  @include respond(tab-pot) {
+    font-size: 3.5rem;
+  }
+
+  @include respond(mobile) {
+    font-size: 2.5rem;
+  }
+}

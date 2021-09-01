@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+  &::after {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+  }
+  &::before {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 1.6;
+  color: #3b3f41;
+
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
+
+  @include respond(tab-land-big) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-land-small) {
+    font-size: 53.125%;
+  }
+
+  @include respond(tab-pot) {
+    font-size: 43.75%;
+  }
+
+  @include respond(mobile) {
+    font-size: 50%;
+  }
+}
+body {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 114rem;
+  margin: 0 auto;
+
+  @include respond(tab-land-big) {
+    max-width: 100rem;
+  }
+
+  @include respond(tab-land-small) {
+    max-width: 90rem;
+  }
+
+  @include respond(tab-pot) {
+    max-width: 70rem;
+  }
+
+  @include respond(mobile) {
+    max-width: 50rem;
+  }
+}
+.slick-slide {
+  margin: 1rem;
+}
+.slick-prev {
+  left: -7rem;
+  &:before {
+    color: #fa8231;
+  }
+
+  @include respond(tab-land-big) {
+    left: -4rem;
+  }
+}
+.slick-next {
+  right: -7rem;
+  &:before {
+    color: #fa8231;
+  }
+
+  @include respond(tab-land-big) {
+    right: -4rem;
+  }
+}
+.slick-dots {
+  li {
+    button {
+      &:before {
+        color: #fd9644;
+      }
+    }
+  }
+  li.slick-active {
+    button {
+      &:before {
+        color: #fa8231;
+      }
+    }
+  }
+
+  @include respond(mobile) {
+    bottom: -8rem;
+  }
+}
