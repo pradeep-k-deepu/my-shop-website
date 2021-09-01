@@ -12,11 +12,11 @@ const servicesBtn = document.querySelector(".btn__main");
 
 //HEADER IMAGE CHANGING
 const images = [
-  "images/bg1.jpg",
-  "images/bg2.jpg",
-  "images/bg3.jpg",
-  "images/bg4.jpg",
-  "images/bg5.jpg",
+  "./images/bg1.jpg",
+  "./images/bg2.jpg",
+  "./images/bg3.jpg",
+  "./images/bg4.jpg",
+  "./images/bg5.jpg",
 ];
 
 let i = 0;
