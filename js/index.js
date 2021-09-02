@@ -1,5 +1,5 @@
 //DOM ELEMENTS
-const slider = document.querySelector(".slider__img");
+// const slider = document.querySelector(".slider__img");
 const links = document.querySelectorAll(".nav__item");
 const header = document.querySelector(".header");
 const linksContainer = document.querySelector(".nav__links-container");
@@ -11,25 +11,25 @@ const seeMoreBtn = document.querySelector(".btn__sub");
 const servicesBtn = document.querySelector(".btn__main");
 
 //HEADER IMAGE CHANGING
-const images = [
-  "./images/bg1.jpg",
-  "./images/bg2.jpg",
-  "./images/bg3.jpg",
-  "./images/bg4.jpg",
-  "./images/bg5.jpg",
-];
+// const images = [
+//   "./images/bg1.jpg",
+//   "./images/bg2.jpg",
+//   "./images/bg3.jpg",
+//   "./images/bg4.jpg",
+//   "./images/bg5.jpg",
+// ];
 
-let i = 0;
-function bgImgChange() {
-  if (i > images.length - 1) {
-    i = 0;
-  }
-  slider.src = images[i];
-  i++;
+// let i = 0;
+// function bgImgChange() {
+//   if (i > images.length - 1) {
+//     i = 0;
+//   }
+//   slider.src = images[i];
+//   i++;
 
-  setTimeout(bgImgChange, 3000);
-}
-bgImgChange();
+//   setTimeout(bgImgChange, 3000);
+// }
+// bgImgChange();
 
 //SMOOTH SCROLLING
 links.forEach((el) => {

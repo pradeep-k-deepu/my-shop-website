@@ -41,3 +41,9 @@ $(".testimonials").slick({
     // instead of a settings object
   ],
 });
+
+$(".slider").slick({
+  autoplay: true,
+  dots: false,
+  arrows: false,
+});
