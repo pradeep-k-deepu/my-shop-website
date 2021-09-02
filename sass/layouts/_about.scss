@@ -88,6 +88,11 @@
     @include respond(tab-pot) {
       font-size: 1.9rem;
     }
+
+    @include respond(mobile) {
+      font-size: 1.5rem;
+      padding: 0.5rem;
+    }
   }
   .about__info-social-icons {
     margin: 0 auto;

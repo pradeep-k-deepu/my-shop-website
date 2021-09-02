@@ -37,6 +37,10 @@
     box-shadow: 0.05rem 0.1rem 0.3rem #fd9644;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+
+    @include respond(mobile) {
+      margin: 1rem;
+    }
     .user__info {
       display: -webkit-box;
       display: -ms-flexbox;

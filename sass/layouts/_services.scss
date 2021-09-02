@@ -31,6 +31,10 @@
         transform: scale(1.1);
         -webkit-transition: all 0.3s ease-in;
         transition: all 0.3s ease-in;
+
+        @include respond(mobile) {
+          margin: 1rem;
+        }
       }
       .service__name {
         position: absolute;
