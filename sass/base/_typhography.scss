@@ -13,6 +13,8 @@
 
   @include respond(mobile) {
     padding: 0 1rem;
+    word-spacing: 1.3rem;
+    letter-spacing: 0.8rem;
   }
 
   @include respond(mobile-small) {
