@@ -83,7 +83,7 @@ Observer.observe(header);
     if (e.target.closest(".nav__icon--open")) {
       navScreen.setAttribute(
         "style",
-        "width: 25%;opacity: 1;visibility: visible;"
+        "width: 40%;opacity: 1;visibility: visible;"
       );
       navIconOpen.classList.toggle("hidden");
       navIconClose.classList.toggle("hidden");

@@ -3,6 +3,7 @@
 //tab-land-small(max-width: 1000)
 //tab-pot       (max-width: 800)
 //mobile        (max-width: 600)
+//mobile-small (max-width: 29.37)
 
 @mixin respond($device) {
   @if $device == big-desktop {
@@ -31,6 +32,12 @@
 
   @if $device == mobile {
     @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $device == mobile-small {
+    @media only screen and (max-width: 29.37em) {
       @content;
     }
   }

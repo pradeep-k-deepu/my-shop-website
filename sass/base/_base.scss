@@ -66,6 +66,10 @@ body {
   @include respond(mobile) {
     max-width: 50rem;
   }
+
+  @include respond(mobile-small) {
+    max-width: 40rem;
+  }
 }
 
 .testimonials {
@@ -81,6 +85,10 @@ body {
     @include respond(tab-land-big) {
       left: -4rem;
     }
+
+    @include respond(mobile-small) {
+      left: 0rem;
+    }
   }
   .slick-next {
     right: -7rem;
@@ -90,6 +98,10 @@ body {
 
     @include respond(tab-land-big) {
       right: -4rem;
+    }
+
+    @include respond(mobile-small) {
+      right: 0rem;
     }
   }
   .slick-dots {

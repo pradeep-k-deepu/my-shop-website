@@ -32,8 +32,7 @@ $(".testimonials").slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        dots: true,
-        arrows: false,
+        dots: false,
       },
     },
     // You can unslick at a given breakpoint now by adding:
@@ -44,6 +43,8 @@ $(".testimonials").slick({
 
 $(".slider").slick({
   autoplay: true,
+  autoplaySpeed: 2500,
+  easing: "ease-in-out",
   dots: false,
   arrows: false,
 });

@@ -40,7 +40,9 @@
     gap: 5rem;
     .nav__item {
       font-size: 2rem;
+
       .nav__link {
+        display: block;
         text-decoration: none;
         text-transform: uppercase;
         font-family: inherit;
@@ -71,6 +73,11 @@
 
   @include respond(tab-pot) {
     visibility: visible;
+  }
+
+  @include respond(mobile) {
+    top: 2vh;
+    right: 2vh;
   }
 }
 .hidden {

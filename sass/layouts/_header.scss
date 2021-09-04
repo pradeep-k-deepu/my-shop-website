@@ -101,8 +101,6 @@
     }
 
     @include respond(mobile) {
-      height: 7vh;
-      width: 7vh;
     }
   }
   .nav__links-container {
@@ -158,8 +156,11 @@
     }
 
     @include respond(mobile) {
-      padding: 2rem;
       gap: 9rem;
+    }
+
+    @include respond(mobile-small) {
+      gap: 6rem;
     }
   }
   .buttons {
